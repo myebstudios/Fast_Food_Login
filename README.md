@@ -7,4 +7,4 @@ The app was designed in [Figma](http://figma.com), you can duplicate the figma f
 
 <h2 style="color: green">Feel free to clone this repository and try to implement the design.</h2>
 
-![alt text](https://github.com/[myebstudios]/[Fast_Food_Login]/blob/[master]/docs/figma_design_exports/fast_food_login_design.png?raw=true)
+![Figma design](https://github.com/myebstudios/Fast_Food_Login/blob/master/docs/figma_design_exports/fast_food_login_design.png?raw=true)
