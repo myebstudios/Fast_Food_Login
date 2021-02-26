@@ -11,6 +11,9 @@ Window {
     color: "#00000000"
     title: qsTr("Hello World")
 
+    // Make the window Frameless
+    flags: Qt.FramelessWindowHint    
+
     Rectangle {
         id: mainContainer
         color: "#ffffff"
@@ -22,12 +25,33 @@ Window {
         anchors.topMargin: 5
         radius: 10
 
+        // Create a transparent title bar
+        Rectangle {
+            id: titleBar
+            width: parent.width
+            height: 40
+            color: "transparent"
+            anchors.top:parent.top
+            anchors.left:parent.left
+            anchors.right:parent.right
+            z:10
+
+            DragHandler {
+                onActiveChanged: if (active) {
+                    mainWindow.startSystemMove()
+                }
+            }
+        }
+
         CloseButton {
             anchors.right: parent.right
             anchors.top: parent.top
             anchors.topMargin: 15
             anchors.rightMargin: 15
             z: 10
+
+            //Quit the app when clicking on CloseButton
+            onClicked: Qt.quit()
         }
 
         Rectangle {
