@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
+import QtWinExtras 1.0
 import "qml/controls"
 
 Window {
@@ -12,7 +13,8 @@ Window {
     title: qsTr("Hello World")
 
     // Make the window Frameless
-    flags: Qt.FramelessWindowHint
+    flags: Qt.Window | Qt.FramelessWindowHint
+
     Rectangle {
         id: mainContainer
         color: "#ffffff"
