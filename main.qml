@@ -12,8 +12,7 @@ Window {
     title: qsTr("Hello World")
 
     // Make the window Frameless
-    flags: Qt.FramelessWindowHint    
-
+    flags: Qt.FramelessWindowHint
     Rectangle {
         id: mainContainer
         color: "#ffffff"
@@ -31,15 +30,15 @@ Window {
             width: parent.width
             height: 40
             color: "transparent"
-            anchors.top:parent.top
-            anchors.left:parent.left
-            anchors.right:parent.right
-            z:10
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: parent.right
+            z: 10
 
             DragHandler {
                 onActiveChanged: if (active) {
-                    mainWindow.startSystemMove()
-                }
+                                     mainWindow.startSystemMove()
+                                 }
             }
         }
 
@@ -155,13 +154,42 @@ Window {
                 inputLabel: "Password"
                 fieldType: "Password"
             }
+
+            StandardButton {
+                id: okButton
+                text: "OK"
+                anchors.right: parent.right
+                anchors.top: passwordInput.bottom
+                anchors.topMargin: 30
+                anchors.rightMargin: 79
+            }
+
+            StandardButton {
+                id: forgotPasswordButton
+                anchors.top: passwordInput.bottom
+                anchors.leftMargin: 79
+                anchors.topMargin: 30
+                text: "Forgot Password"
+                anchors.left: parent.left
+
+                textColor: "#545454"
+                buttonColor: "#ffffff"
+            }
+
+            IconButton {
+                id: facebookLogin
+                anchors.top: forgotPasswordButton.bottom
+                anchors.topMargin: 30
+                anchors.left: parent.left
+                anchors.leftMargin: 79
+            }
         }
     }
 }
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:0.9}D{i:9}D{i:10}D{i:11}
+    D{i:0;formeditorZoom:0.9}
 }
 ##^##*/
 
