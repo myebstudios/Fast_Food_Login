@@ -49,9 +49,6 @@ Window {
             anchors.topMargin: 15
             anchors.rightMargin: 15
             z: 10
-
-            //Quit the app when clicking on CloseButton
-            onClicked: Qt.quit()
         }
 
         Rectangle {
@@ -175,6 +172,7 @@ Window {
 
                 textColor: "#545454"
                 buttonColor: "#ffffff"
+                textUnderline: true
             }
 
             IconButton {
@@ -184,13 +182,29 @@ Window {
                 anchors.left: parent.left
                 anchors.leftMargin: 79
             }
+
+            Label {
+                id: termLabel
+                color: "#8E8E8E"
+                text: qsTr("Terms and Conditions & Privacy Policy")
+
+                anchors.top: facebookLogin.bottom
+                font.pixelSize: 12
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.topMargin: 20
+
+                MouseArea {
+                    anchors.fill: parent
+                    cursorShape: Qt.PointingHandCursor
+                }
+            }
         }
     }
 }
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:0.9}
+    D{i:0;formeditorZoom:2}
 }
 ##^##*/
 

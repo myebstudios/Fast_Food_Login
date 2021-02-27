@@ -18,6 +18,13 @@ Button {
         source: "../../images/closeIcon.png"
         anchors.horizontalCenter: parent.horizontalCenter
     }
+
+    //Quit the app when clicking on CloseButton
+    MouseArea {
+        anchors.fill: parent
+        cursorShape: Qt.PointingHandCursor
+        onClicked: Qt.quit()
+    }
 }
 
 /*##^##
@@ -25,3 +32,4 @@ Designer {
     D{i:0;formeditorZoom:10}
 }
 ##^##*/
+

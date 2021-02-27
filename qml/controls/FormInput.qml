@@ -19,6 +19,11 @@ Rectangle {
         anchors.bottomMargin: 0
     }
 
+    MouseArea {
+        anchors.fill: parent
+        cursorShape: Qt.IBeamCursor
+    }
+
     Text {
         id: fieldLabel
         text: inputLabel

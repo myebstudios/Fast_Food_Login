@@ -9,6 +9,7 @@ Button {
 
     property color textColor: "#ffffff"
     property color buttonColor: "#40CC6F"
+    property bool textUnderline: false
 
     contentItem: Item {
         Text {
@@ -18,7 +19,13 @@ Button {
             anchors.horizontalCenter: parent.horizontalCenter
             color: textColor
             font.pixelSize: 12
+            font.underline: standardButton.textUnderline
         }
+    }
+
+    MouseArea {
+        anchors.fill: parent
+        cursorShape: Qt.PointingHandCursor
     }
 
     background: Rectangle {
@@ -37,7 +44,7 @@ Button {
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:2}
+    D{i:0;formeditorZoom:1.5}
 }
 ##^##*/
 

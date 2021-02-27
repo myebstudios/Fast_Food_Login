@@ -29,6 +29,11 @@ Button {
         anchors.leftMargin: 67
     }
 
+    MouseArea {
+        anchors.fill: parent
+        cursorShape: Qt.PointingHandCursor
+    }
+
     background: Rectangle {
         color: buttonColor
         radius: 50
@@ -48,3 +53,4 @@ Designer {
     D{i:0;formeditorZoom:0.9}
 }
 ##^##*/
+
